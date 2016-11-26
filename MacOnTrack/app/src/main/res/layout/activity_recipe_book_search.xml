@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.jenell.macgetontrack.activities.RecipeBookSearch"
+    android:background="@drawable/cookbooks">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select a Recipe"
+        android:id="@+id/search_recipe_TextView_Title"
+        android:layout_margin="10dp"
+        android:textColor="@color/recipeBookSearchTitle"
+        android:textStyle="bold"
+        android:autoText="true"
+        android:phoneNumber="false"
+        android:background="@color/trans_white"
+        android:visibility="invisible" />
+
+    <ExpandableListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipebs_expandableListView_find"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/search_recipe_TextView_Title"
+        android:focusable="false"
+        android:layout_marginTop="30dp"
+        android:background="@color/trans_white2"
+        android:padding="5dp" />
+
+</RelativeLayout>

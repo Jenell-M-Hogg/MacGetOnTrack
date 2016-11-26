@@ -1,0 +1,97 @@
+<resources>
+
+    <!-- For drawables C:\Users\Jenell\AndroidStudioProjects\MacOnTrack\app\src\main\res\drawable-->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/CustomActionBarTheme</item>
+        
+    </style>
+
+    <!-- My Custom Theme -->
+    <style name="CustomTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        
+
+
+    </style>
+
+
+
+
+    <!-- Some colours I use in my theme-->
+    <color name="Mac_maroon">#259B25</color>
+
+    <color name="white">#fffffdfd</color>
+    <color name="black">#f000</color>
+    <color name="coolGrey">#666666</color>
+    <color name="coolGrey4">#999999</color>
+    <color name="coolGrey3">#cccccc</color>
+    <color name="link_blue">#0099cc</color>
+    <color name="green">#33EC55</color>
+    <color name="yellow">#FFF823</color>
+    <color name="trans_green">#BF96FF91</color>
+    <color name="trans_grey">#BFcccccc</color>
+    <color name="trans_white2">#8CFFFFFF</color>
+    <color name="trans_white">#BFFFFFFF</color>
+    <color name="lime_green">#18FF00</color>
+    <color name="nice_green">#cf4bca48</color>
+
+    <color name="brown">#683000</color>
+
+    <color name="ivory">#F3F0DF</color>
+
+    <color name="orange">#F97D03</color>
+    <color name="trans_orange">#BFF97D03</color>
+
+
+    <!--TODO -->
+    <color name="recipeBookSearchTitle">@color/black</color>
+    <color name="recipeBookBackGround">@color/nice_green</color>
+    <color name="header">@color/trans_orange</color>
+    <color name="item">@color/ivory</color>
+    <color name="header_text">@color/white</color>
+    <color name="item_text">@color/brown</color>
+
+
+    <!-- Recipe Book  -->
+     <color name="recipeBack">@color/white</color>
+    <color name="recipeTitles">@color/Mac_maroon</color>
+
+
+
+
+
+    <!-- Action Bar Stlyle -->
+    <style name="CustomActionBarTheme" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <!-- Make the action bar maroon -->
+        <item name="android:background">@drawable/macwhite</item>
+
+
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:background">@color/trans_white</item>
+        <item name="android:textColor">@color/Mac_maroon</item>
+
+    </style>
+
+    <style name="editText" parent="@android:style/Widget.Holo.Light.EditText">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textColorHint">@color/coolGrey</item>
+        <item name="android:textColorHighlight">@color/white</item>
+        <item name="android:background">@color/trans_white</item>
+
+
+    </style>
+
+    <style name="textLink">
+        <item name="android:textColor">@color/link_blue</item>
+        <item name="android:textStyle">italic</item>
+
+    </style>
+
+
+
+
+</resources>

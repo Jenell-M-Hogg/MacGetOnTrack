@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/recipe_page"
+    android:orientation="vertical"
+    android:measureWithLargestChild="false"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RecipeBook"
+    android:background="@drawable/background">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_page_LinearLayout_decisionpanel"
+        android:layout_weight="0.5"
+        android:visibility="gone"
+        android:background="@drawable/whitetitle">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:id="@+id/recipe_page_ImageView_decisionIcon"
+            android:src="@drawable/dinner_icon"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:weightSum="0.75"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eat this for dinner?"
+                android:id="@+id/recipe_page_textView_mealchoice"
+                android:layout_gravity="center"
+                android:layout_margin="2dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Yes"
+                android:id="@+id/recipe_page_decisionYes"
+                android:layout_weight="0.5"
+                android:layout_margin="10dp"
+                android:background="@color/trans_grey"
+                android:onClick="onDecision"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollingHolder"
+        android:layout_weight="0.95">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/recipe_page_ImageView_pic"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_weight="0.95">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/main_holder">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/recipe_page_ImageView_pic"
+                    android:src="@mipmap/ic_launcher"
+                    android:adjustViewBounds="true"
+                    android:layout_below="@+id/recipe_page_TextView_recipeTitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="51dp"
+                    android:layout_weight="2.08"
+                    android:maxHeight="350dp"
+                    android:longClickable="false"
+                    android:maxWidth="350dp" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:nestedScrollingEnabled="true"
+                    android:background="@color/trans_white"
+                    android:id="@+id/yool"
+                    android:layout_margin="15dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Recipe Name"
+                        android:id="@+id/recipe_page_TextView_recipeTitle"
+                        android:fillViewport="false"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:paddingTop="5dp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_horizontal"
+                        android:autoText="false"
+                        android:layout_margin="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Ingredients\n"
+                        android:id="@+id/textView"
+                        android:textColor="@color/recipeTitles"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="-Ingredient 1 is a long ingredient"
+                        android:id="@+id/recipe_page_TextView_ingredient"
+                        android:nestedScrollingEnabled="true"
+                        android:layout_marginBottom="30dp"
+                        android:padding="5dp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="15dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Directions"
+                        android:textSize="18dp"
+                        android:id="@+id/textView4"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/recipeTitles" />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dapibus volutpat volutpat. Quisque maximus facilisis diam a mollis. Proin maximus blandit feugiat.\n Mauris quis orci eget risus molestie ultrices. \n\nPell0entesque hendrerit posuere purus in ultricies. Sed efficitur neque id ante faucibus, nec convallis nisi mattis. Fusce in tempus sem. \n\n, sit amet eleifend dui porta. Proin lacinia, turpis eget cursus dapibus, odio ipsum dignissim eros, sit amet fermentum magna elit a nisl."
+                        android:id="@+id/recipe_page_TextView_directions"
+                        android:padding="5dp"
+                        android:password="false"
+                        android:phoneNumber="false"
+                        android:typeface="normal"
+                         />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

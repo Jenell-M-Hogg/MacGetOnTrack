@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    tools:context=".MainMenu"
+    android:background="@drawable/cookbooks"
+    android:id="@+id/page_main_menu">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:text="My Profile"
+                android:id="@+id/toProfile"
+                android:layout_gravity="center_horizontal"
+                style="@style/buttonStyle"
+                android:onClick="switchScreen" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:text="Today"
+                android:id="@+id/toToday"
+                android:layout_gravity="center_horizontal"
+                style="@style/buttonStyle"
+                android:padding="5dp"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:onClick="switchScreen" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:text="Food Calendar"
+                android:id="@+id/toCalendar"
+                android:layout_marginTop="45dp"
+                style="@style/buttonStyle"
+                android:padding="5dp"
+                android:paddingTop="10dp"
+                android:onClick="switchScreen"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="36dp"
+                android:text="Nutritional Info"
+                android:id="@+id/toNutritional"
+                android:layout_marginTop="45dp"
+                style="@style/buttonStyle"
+                android:typeface="normal"
+                android:padding="5dp"
+                android:paddingTop="40dp"
+                android:onClick="switchScreen"/>
+
+            <Button
+                style="@style/buttonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="36dp"
+                android:text="Recipe Book"
+                android:id="@+id/main_menu_button_recipeBook"
+                android:layout_marginTop="45dp"
+                android:typeface="normal"
+                android:padding="5dp"
+                android:paddingTop="40dp"
+                android:onClick="switchScreen" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:clickable="true"
+            android:onClick="switchScreen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/helpButton"
+            android:src="@drawable/help_button"
+            android:layout_gravity="right|top"
+            android:visibility="invisible" />
+
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/page_profile"
+
+    >
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:id="@+id/profilePic"
+        android:src="@drawable/profile"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:layout_margin="10dp"
+        android:background="@color/Mac_maroon"
+        android:padding="4dp"
+        android:onClick="getPicture"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Edit"
+        android:id="@+id/editProfile"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:onClick="edit"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Username : ____________"
+        android:id="@+id/profile_TextView_username"
+        android:layout_above="@+id/profilePic"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:textColor="@color/Mac_maroon" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/profile_editText_username"
+        style="@style/editText"
+        android:hint="Username"
+
+        android:layout_alignBottom="@+id/profile_TextView_username"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility="gone"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/profile_Button_submitEdit"
+        android:layout_alignBottom="@+id/editProfile"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:onClick="submitEdit" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Edit your username"
+        android:id="@+id/message"
+        android:layout_alignTop="@+id/profilePic"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

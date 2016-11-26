@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".NutritionalScreen"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:outlineProvider="background"
+    android:background="@drawable/letseat">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Nutritional Information"
+        android:id="@+id/textView13"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/trans_white"
+        android:elegantTextHeight="false"
+        android:layout_marginTop="3dp"
+        android:elevation="5dp"
+        android:padding="2dp" />
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/imageView"
+        android:src="@drawable/nutritional_info"
+        android:background="@color/trans_white"
+        android:clickable="true"
+        android:onClick="zoom"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Tap on the chart to zoom"
+        android:id="@+id/textView3"
+        android:layout_gravity="center"
+        android:background="@color/trans_white" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView15"
+        android:padding="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="121dp"
+        android:text="Unlike a traditional paleolithic diet, the recipes in this app allow for cultivated complex carbohydrates to be consumed. The benefit of including cultivated carbohydrates is that the user can now be tested for celiac disease, should they choose so (celiac disease is caused by gluten proteins found in wheat, barley and rye. However,by completely excluding cultivated complex carbohydrates in your diet, the individual will be unable to be tested for celiac disease.)"
+        android:id="@+id/textView14"
+        android:padding="2dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="11dp"
+        android:textColor="@color/coolGrey"
+        android:background="@color/trans_white"
+        android:elevation="5dp" />
+</LinearLayout>

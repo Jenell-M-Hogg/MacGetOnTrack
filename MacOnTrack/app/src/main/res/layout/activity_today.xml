@@ -1,0 +1,465 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    tools:context=".Today"
+    android:layout_width="match_parent"
+
+
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+
+    android:id="@+id/page_today"
+    android:background="@drawable/today_page">
+
+    <ImageView
+        android:clickable="true"
+        android:onClick="switchScreen"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/help_Button"
+        android:src="@drawable/help_button"
+        android:layout_gravity="right|top"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="invisible" />
+
+    <TextView android:text="End Of The Day Today: " android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:autoText="true"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18:30"
+        android:id="@+id/today_TextView_endOfDay"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:clickable="true"
+        android:textColor="@color/link_blue"
+        android:textStyle="italic"
+        android:background="@color/white"
+        android:linksClickable="true"
+        android:layout_alignTop="@+id/textView" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textView">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentBottom="true"
+            android:nestedScrollingEnabled="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/trans_white"
+                android:layout_weight="0.25"
+                android:id="@+id/today_LinearLayout_breakfast"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Breakfast"
+                    android:id="@+id/textView30"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose a recipe"
+                    android:id="@+id/today_TextView_breakfastrecipe"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_alignTop="@+id/textView32"
+                    android:layout_toRightOf="@+id/today_CheckBox_breakfastSuccess"
+                    android:layout_toEndOf="@+id/today_CheckBox_breakfastSuccess"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/link_blue" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="215dp"
+                    android:id="@+id/today_ImageView_breakfastPic"
+
+                    android:src="@drawable/breakfast_icon"
+                    android:maxHeight="350dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:maxWidth="350dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time:"
+                        android:id="@+id/textView32"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_below="@+id/textView30"
+                        android:layout_alignLeft="@+id/textView34"
+                        android:layout_alignStart="@+id/textView34"
+                        android:layout_gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18:30"
+                        android:id="@+id/today_TextView_breakfastTime"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_alignTop="@+id/textView32"
+                        android:layout_toRightOf="@+id/textView32"
+                        android:layout_toEndOf="@+id/textView32"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/link_blue" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Did you eat a paleo breakfast?"
+                    android:id="@+id/textView34"
+                    android:layout_above="@+id/today_CheckBox_breakfastSuccess"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes!"
+                    android:id="@+id/today_CheckBox_breakfastSuccess"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:checked="false"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/trans_white"
+                android:layout_weight="0.25"
+                android:id="@+id/today_LinearLayout_lunch"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Lunch"
+                    android:id="@+id/textView8"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose a recipe"
+                    android:id="@+id/today_TextView_lunchRecipe"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_alignTop="@+id/textView10"
+                    android:layout_toRightOf="@+id/today_CheckBox_lunchSuccess"
+                    android:layout_toEndOf="@+id/today_CheckBox_lunchSuccess"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/link_blue" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="215dp"
+                    android:id="@+id/today_ImageView_lunchPic"
+
+                    android:layout_gravity="top|center_horizontal"
+
+
+                    android:maxHeight="350dp"
+                    android:maxWidth="350dp"
+                    android:src="@drawable/lunch_icon" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/linearLayout3"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time:"
+                        android:id="@+id/textView10"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_below="@+id/textView8"
+                        android:layout_alignLeft="@+id/textView12"
+                        android:layout_alignStart="@+id/textView12"
+                        android:layout_gravity="center_vertical" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18:30"
+                        android:id="@+id/today_TextView_lunchTime"
+                        android:layout_row="1"
+                        android:layout_column="0"
+                        android:layout_alignTop="@+id/textView10"
+                        android:layout_toRightOf="@+id/textView10"
+                        android:layout_toEndOf="@+id/textView10"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/link_blue" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Did you eat a paleo lunch?"
+                    android:id="@+id/textView12"
+                    android:layout_above="@+id/today_CheckBox_lunchSuccess"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes!"
+                    android:id="@+id/today_CheckBox_lunchSuccess"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:checked="false"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"></FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/trans_white"
+                android:layout_weight="0.25"
+                android:id="@+id/today_LinearLayout_dinner"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Dinner"
+                    android:id="@+id/textView16"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choose a recipe"
+                    android:id="@+id/today_TextView_dinnerRecipe"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_alignTop="@+id/textView19"
+                    android:layout_toRightOf="@+id/today_CheckBox_dinnerSuccess"
+                    android:layout_toEndOf="@+id/today_CheckBox_dinnerSuccess"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="215dp"
+                    android:id="@+id/today_ImageView_dinnerPic"
+
+                    android:layout_gravity="top|center_horizontal"
+
+                    android:src="@drawable/dinner_icon"
+                    android:maxHeight="350dp"
+                    android:maxWidth="350dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dinner_times"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time:"
+                        android:id="@+id/textView19"
+
+                        android:layout_below="@+id/textView16"
+                        android:layout_alignLeft="@+id/textView17"
+                        android:layout_alignStart="@+id/textView17" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18:30"
+                        android:id="@+id/today_TextView_dinnerTime"
+
+                        android:layout_alignTop="@+id/textView19"
+                        android:layout_toRightOf="@+id/textView19"
+                        android:layout_toEndOf="@+id/textView19"
+                        android:textColor="@color/link_blue" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Did you eat a paleo dinner?"
+                    android:id="@+id/textView17"
+                    android:layout_above="@+id/today_CheckBox_dinnerSuccess"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes!"
+                    android:id="@+id/today_CheckBox_dinnerSuccess"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:checked="false"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/black" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/trans_white"
+                android:id="@+id/today_LinearLayout_snacksdrinks"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="Drinks and Snacks"
+                            android:id="@+id/textView9"
+                            android:layout_weight="0.5" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a drink"
+                            android:id="@+id/today_TextView_drink1"
+                            android:clickable="true"
+                            android:textColor="@color/link_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a drink"
+                            android:id="@+id/Today_TextView_drink2"
+                            android:layout_weight="0.5"
+                            android:clickable="true"
+                            android:textColor="@color/link_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Choose a drink"
+                            android:id="@+id/Today_TextView_drink3"
+                            android:layout_weight="0.5"
+                            android:clickable="true"
+                            android:textColor="@color/link_blue" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
